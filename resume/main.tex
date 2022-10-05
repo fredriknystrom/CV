@@ -1,0 +1,200 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+%\documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.5cm,right=9.5cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+  \usepackage{hyperref}
+\fi
+
+
+% Change the colours if you want to
+\definecolor{Grey}{HTML}{34495E}
+\definecolor{Black}{HTML}{2E2E2E} %2E2E2E
+\definecolor{Green}{HTML}{3CB043}
+\definecolor{Red}{HTML}{960A0A}
+\definecolor{Blue}{HTML}{0077B5}
+
+\colorlet{Green}{Green}
+\colorlet{Red}{Red}
+\colorlet{Blue}{Blue}
+\colorlet{heading}{Grey}
+\colorlet{accent}{Black}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+
+\name{Resumé - Fredrik Nyström}
+\tagline{Student at the Computer Science division at Chalmers University of Technology}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+\photo{4cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{frediknystroms@gmail.com}
+  \phone{+46 709 15 16 06}
+%  \mailaddress{Address, Street, 00000 County}
+  \location{Gothenburg, Sweden}
+%  \homepage{marissamayr.tumblr.com/}
+%  \twitter{@marissamayer}
+\\
+   \github{\href{https://github.com/fredriknystrom
+  }{github.com/fredriknystrom}}
+   \linkedin{\href{www.linkedin.com/in/fredrik-nyström-b1757322b/}{linkedin.com/in/fredrik-nyström-b1757322b}}
+}
+
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+
+\cvsection[page1sidebar]{Education}
+\cvevent{Master of Science in Computer Science and Engineering}{Chalmers University of Technology}{aug 2020 -- ongoing}{Gothenburg, Sweden}
+\begin{itemize}
+    \item Estimated year of examination 2025
+\end{itemize}
+
+\divider
+
+\cvevent{Naturvetenskapsprogrammet}{Sundsgymnasiet}{2017 -- 2020}{Vellinge, Sweden}
+
+\cvsection{Work Experience}
+
+\cvevent{Software developer}{Axis Communications AB}{june 2022 – aug 2022}{Lund, Sweden}
+\begin{itemize}
+    \item Developed a graphical user interface with \textbf{Python}, \textbf{PyQt5} and \textbf{CSS} to ease testing of camera lenses. The
+\end{itemize}
+
+\divider
+
+\cvevent{Extra teacher}{Studdybuddy}{jan 2021 -- june 2022}{Online}
+    \begin{itemize}
+    \item Undervisade gymnasieelever digitalt i matte och programmering.
+\end{itemize}
+
+\divider
+
+\cvevent{Maskinoperatör}{ÅR Carton}{2019, 2020}{Lund, Sverige}
+\begin{itemize}
+    \item Under sommrarna 2019 och 2020 arbetade jag som maskinoperatör vid produktionslinjen.
+\end{itemize}
+
+\newpage
+
+% Begin full width on the next page (where only projects are shown)
+\begin{fullwidth}
+\cvsection{Projekt}
+
+\cvevent{Larmsystem}{C, Latex, GitHub}{}{}
+\begin{itemize}
+  \item I kursen DAT290 var jag projektledare vid utveckling av ett larmsystem bestående av en enchipsdator.
+  \item Systemet utvecklades i \textbf{C}. För dokumentation användes \textbf{Latex}. För versionskontroll användes \textbf{Github}.
+\end{itemize}
+
+\divider
+
+\cvevent{\href{https://github.com/fredriknystrom/Pong}{Pong i pygame}}{Python}{}{}
+\begin{itemize}
+  \item Projektet utvecklades för att förstå och visualisera hitbox och rörelse av olika object.
+  \item Projektet implementerades i \textbf{Python} och pygame användes för grafik.
+\end{itemize}
+
+\divider
+
+\cvevent{\href{https://github.com/fredriknystrom/FIFAWorldCupTip}{VM tips}}{Python}{}{}
+\begin{itemize}
+  \item Genererar ett automatiserat excelark från python kod. Användaren fyller endast i resultat för varje match så skickas lagen automatiskt vidare genom slutspelet. Tanken är att det ska skapas ett automatiskt rättnings script till detta senare.
+  \item Projektet implementerades i \textbf{Python} och biblioteket openpyxl användes.
+\end{itemize}
+
+% Other merits
+\cvsection{Other merits}
+
+\cvevent{Datateknologsektionens idrottskommitté, iDrott}{}{maj 2022 -- pågående}{}
+\begin{itemize}
+  \item Jag är aktiv i planeringen av och arrangerar veckovis idrottsträningar, för att uppmuntra  stillasittande datateknologer till fysisk aktivitet. 
+  \item Jag är lagledare för datateknologsektionens fotbollslag.
+\end{itemize}
+
+\divider
+
+\cvevent{Ordförande Brf Volrat Thams styrelse}{}{maj 2022 -- pågående}{}
+\begin{itemize}
+  \item Arbetet som ordförande innefattar utskick av kallelse och dagordning till styrelesemöte varje månad. Beslut gällande omläggning av lån. Attestering av månadsavier och leverantörsfakturor.
+\end{itemize}
+
+\divider
+
+\cvevent{Svensk Klassiker}{}{2022/2023}{}
+
+\divider
+
+\cvevent{Adlerbertska Stiftelsernas stipendium}{}{2021}{}
+
+\divider
+
+\cvevent{B-Körtkort, truckkort A2 och A4}{}{2019}{}
+
+% References moved from page 1
+\cvsection{Referenser}
+Referenser/intyg/betyg medtages vid intervjutillfälle eller skickas in vid förfrågan.
+
+% End fullwidth for second page
+\end{fullwidth}
+
+\end{document}
